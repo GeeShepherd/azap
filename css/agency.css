@@ -98,6 +98,7 @@ body {
     .navbar-brand {
         display:none;
     }
+
   #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -688,3 +689,37 @@ h1 {
 }
 
 /*End Video*/
+
+/*Placeholder Text*/
+
+textarea::-webkit-input-placeholder {
+color: #b6d3ed !important;
+}
+ 
+textarea:-moz-placeholder { /* Firefox 18- */
+color: #b6d3ed !important;  
+}
+ 
+textarea::-moz-placeholder {  /* Firefox 19+ */
+color: #b6d3ed !important;  
+}
+ 
+textarea:-ms-input-placeholder {  
+color: #b6d3ed !important;  
+}
+
+input::-webkit-input-placeholder {
+color: #b6d3ed !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #b6d3ed !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #b6d3ed !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #b6d3ed !important;  
+}
