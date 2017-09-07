@@ -1,785 +1,462 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
 
-  <head>
+<html>
+<head>
+    <title>Profile</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.2/angular-sanitize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 
-    <title>AZAP</title>
+    <script src="https://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.118/js/jszip.min.js"></script>
+    <link href="https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common-bootstrap.core.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.1/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- Custom styles for this template -->
-    <link href="css/portfolio.css" rel="stylesheet">
+    <link href="/Resources/modern/css/modern.min.css" rel="stylesheet" />
+    <!--<link href="/assets/css/landing-custom.css" rel="stylesheet" type="text/css" />-->
+    <link href="/Resources/modern/css/landing.css" rel="stylesheet" />
+    <link href="/Resources/modern/css/custom.css" rel="stylesheet" />
 
-  </head>
+    <link href="/modules/profile_v1.0.css" rel="stylesheet" />
 
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">HOME</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#scenic">Scenic</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#business">Business</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#construction">Contstruction</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#neighborhoods">Neighborhoods</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#events">Events</a>
-            </li>
-              <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#personal">Personal</a>
-              </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Scenic Grid -->
-      <div id="scenic"></div>
-    <section class="bg-light" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Scenic</h2>
-            <h3 class="section-subheading text-muted">About Text</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/Thunderbird-Sunset.png" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Thunderbird Mountain</h4>
-              <p class="text-muted">Sunset</p>
-            </div>
-          </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/AZ-Sunset1.png" alt="">
+    <script src="/Resources/modern/js/toastr.min.js"></script>
+    <link href="/Resources/modern/css/toastr.min.css" rel="stylesheet" />
+
+    <script src="/Resources/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/Resources/sweetalert-master/dist/sweetalert.css" />
+
+    <link rel="stylesheet" href="/Resources/glyphicons/css/glyphicons.css" />
+    <link rel="stylesheet" href="/Resources/glyphicons/css/glyphicons-bootstrap.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="/app/oauth2_token_v1.0.js"></script>
+    <script type="text/javascript" src="/app/user_v1.0.js"></script>
+    <script type="text/javascript" src="/app/app_v1.3.js"></script>
+
+    <script src="profile-ng_v1.0.js" type="text/javascript"></script>
+    <script src="serviceLocation-ngCtrl_v1.0.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script src="categorySelector-ngController_v1.0.js"></script>
+</head>
+<body ng-app="Profile" ng-controller="ProfileCtrl">
+    <div id="divLoading" class="show"></div>
+    <nav id="header" class="navbar navbar-fixed-top whiteHeader">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-size:17px;">
+                    <img src="/assets/images/logos/favicon-32x32.png" style="width: 30px; float: left; margin-right: 10px; margin-top: -4px;" />Source Directory
                 </a>
-                <div class="portfolio-caption">
-                    <h4>Arizona Sunset</h4>
-                    <p class="text-muted">Unedited</p>
-                </div>
             </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/New-Housing.png" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>New Built home footage</h4>
-                    <p class="text-muted">Parents home</p>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-      <!-- Business Grid -->
-      <div id="business"></div>
-      <section class="bg-light" id="portfolio">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2 class="section-heading">Business</h2>
-                      <h3 class="section-subheading text-muted">About Text</h3>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/Thunderbird-Sunset.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Thunderbird Mountain</h4>
-                          <p class="text-muted">Sunset</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/AZ-Sunset1.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Arizona Sunset</h4>
-                          <p class="text-muted">Unedited</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/New-Housing.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>New Built home footage</h4>
-                          <p class="text-muted">Parents home</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <!-- Construction Grid -->
-      <div id="construction"></div>
-      <section class="bg-light" id="portfolio">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2 class="section-heading">Construction</h2>
-                      <h3 class="section-subheading text-muted">About Text</h3>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/Thunderbird-Sunset.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Thunderbird Mountain</h4>
-                          <p class="text-muted">Sunset</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/AZ-Sunset1.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Arizona Sunset</h4>
-                          <p class="text-muted">Unedited</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/New-Housing.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>New Built home footage</h4>
-                          <p class="text-muted">Parents home</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <!-- Neihborhoods Grid -->
-      <div id="neighborhoods"></div>
-      <section class="bg-light" id="portfolio">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2 class="section-heading">Neighborhoods</h2>
-                      <h3 class="section-subheading text-muted">About Text</h3>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/Thunderbird-Sunset.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Thunderbird Mountain</h4>
-                          <p class="text-muted">Sunset</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/AZ-Sunset1.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Arizona Sunset</h4>
-                          <p class="text-muted">Unedited</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/New-Housing.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>New Built home footage</h4>
-                          <p class="text-muted">Parents home</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <!-- Events Grid -->
-      <div id="events"></div>
-      <section class="bg-light" id="portfolio">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2 class="section-heading">Events</h2>
-                      <h3 class="section-subheading text-muted">About Text</h3>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/Thunderbird-Sunset.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Thunderbird Mountain</h4>
-                          <p class="text-muted">Sunset</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/AZ-Sunset1.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Arizona Sunset</h4>
-                          <p class="text-muted">Unedited</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/New-Housing.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>New Built home footage</h4>
-                          <p class="text-muted">Parents home</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <!-- Persoanl Grid -->
-      <div id="personal"></div>
-      <section class="bg-light" id="portfolio">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2 class="section-heading">Personal</h2>
-                      <h3 class="section-subheading text-muted">About Text</h3>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/Thunderbird-Sunset.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Thunderbird Mountain</h4>
-                          <p class="text-muted">Sunset</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/AZ-Sunset1.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>Arizona Sunset</h4>
-                          <p class="text-muted">Unedited</p>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-                      <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                          <div class="portfolio-hover">
-                              <div class="portfolio-hover-content">
-                                  <i class="fa fa-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <img class="img-fluid" src="img/portfolio/New-Housing.png" alt="">
-                      </a>
-                      <div class="portfolio-caption">
-                          <h4>New Built home footage</h4>
-                          <p class="text-muted">Parents home</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-    <!-- Contact -->
-      <section id="contact">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2 class="section-heading">Contact Us</h2>
-                      <h3 class="section-subheading" style="color:white;">Our corporate office is located in central Phoneix, Arizona. We will film anywhere within a 30 mile radius of downtown Phoenix without charge. We would be happy to travel for your event, however travel expenses may occur.</h3>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-12">
-                      <form id="contactForm" name="sentMessage" novalidate>
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="form-group">
-                                      <input class="form-control" id="name" type="text" placeholder="Full Name *" required data-validation-required-message="Please enter your name.">
-                                      <p class="help-block text-danger"></p>
-                                  </div>
-
-                                  <div class="form-group">
-                                      <input class="form-control" id="company" type="text" placeholder="Company">
-                                      <p class="help-block text-danger"></p>
-                                  </div>
-                                  <div class="form-group">
-                                      <input class="form-control" id="email" type="email" placeholder="Email *" required data-validation-required-message="Please enter your email address.">
-                                      <p class="help-block text-danger"></p>
-                                  </div>
-                                  <div class="form-group">
-                                      <input class="form-control" id="phone" type="tel" placeholder="Phone">
-                                      <p class="help-block text-danger"></p>
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="form-group">
-                                      <textarea class="form-control" id="message" placeholder="Message *" required data-validation-required-message="Please enter a message."></textarea>
-                                      <p class="help-block text-danger"></p>
-                                  </div>
-                              </div>
-                              <div class="clearfix"></div>
-                              <div class="col-lg-12 text-center">
-                                  <div id="success"></div>
-                                  <button id="sendMessageButton" class="btn btn-xl" type="submit">Send Message</button>
-                              </div>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-    <!-- Footer -->
-    <footer style="background:white;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span class="copyright">Copyright &copy; AZ Aerial Productions 2017</span>
-          </div>
-            <div class="col-md-4">
-                <ul class="list-inline social-buttons">
-                    <li class="list-inline-item">
-                        <a href="#" data-toggle="tooltip" title="Facebook">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" data-toggle="tooltip" title="Instagram">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" data-toggle="tooltip" title="YouTube">
-                            <i class="fa fa-youtube-play"></i>
-                        </a>
-                    </li>
+            <div id="navbar" class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="(key, value) in profile" ng-class="{'active': $index === 0}"><a href="#" ref="{{key}}" ng-click="moveTo(key, $event)">{{key | capitalize}}</a></li>
+                    <li><a href="#" onclick="$user.logout();"><strong>Log Out</strong></a></li>
                 </ul>
-
-
-                <h5>Follow Us!</h5>
             </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </footer>
+    </nav>
 
-    <!-- Portfolio Modals -->
-
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
+    <div class="page-inner" ng-cloak>
+        <div id="" class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                    <style>
-                        .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
-                        .video-container iframe, .video-container object, .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-                    </style>
-                  <!-- Project Details Go Here -->
-                    <div class="row">
-                        <h2>Thunderbird Mountain Park</h2>
-                    </div>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/qAYwTxCmEH4" frameborder="0" allowfullscreen></iframe>
 
+                <div class="panel panel-white" style="margin-top: 55px; padding-right: 15px; padding-left: 15px;" id="user">
+                    <div class="panel-heading">
+                        <h2 style="margin-top: 0px;">User Profile</h2>
                     </div>
-                        <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                  <p>Use this area to describe your project. </p>
-                  
+                    <div class="panel-body">
+                        <div class="col-md-6">
+                            <div ng-repeat="(key, value) in profile.user" ng-if="$even">
+                                <div ng-include="'profile-template.html'"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div ng-repeat="(key, value) in profile.user" ng-if="$odd">
+                                <div ng-include="'profile-template.html'"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <div class="panel panel-white" style="padding-right: 15px; padding-left: 15px;" id="company">
+                    <div class="panel-heading">
+                        <h2 style="margin-top: 0px;">Company Profile</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-6">
+                            <div ng-repeat="(key, value) in profile.company" ng-if="$even">
+                                <div ng-include="'profile-template.html'"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div ng-repeat="(key, value) in profile.company" ng-if="$odd">
+                                <div ng-include="'profile-template.html'"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-white" id="products_services">
+                    <div ng-include="'category-template.html'"></div>
+                </div>
+
+                <div class="panel panel-white" id="attributes">
+                    <div class="panel-heading m-b-lg">
+                        <h2 style="margin-top: 0px;">
+                            Attributes <i class="fa fa-question-circle" style="font-size: 16px;" aria-hidden="true" title="Expand product and service descriptions with key features or unique identifiers"></i>
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12 m-b-md">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="attribute" placeholder="List attributes here" ng-keyup="onKeyUp($event)" maxlength="300" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success proactis-blue-background" ng-click="addAttribute()">Add Attribute</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div ng-if="Categories.Attributes.length > 0">
+                            <div ng-repeat="attribute in Categories.Attributes" class="tag label label-info m-r-xxs m-b-xxs proactis-blue-background" style="font-size: 100%; padding-right: 0px !important; white-space: normal; display: inline-block;">
+                                {{attribute.text}}
+                                <span type="button" ng-if="attribute.deletable" style="cursor: pointer; padding-right: 5px !important;" title="Remove Attribute" ng-click="deleteAttribute(attribute)">&times;</span>
+                            </div>
+                        </div>
+                        <div ng-if="Categories.Attributes.length === 0">
+                            <p>No attributes added yet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-white" id="certificates">
+                    <div class="panel-heading m-b-lg">
+                        <h2 style="margin-top: 0px;">
+                            Business Licenses and Certificates <i class="fa fa-question-circle" style="font-size: 16px;" aria-hidden="true" title="Show off you expertise by displaying your licenses and certificate"></i>
+                        </h2>
+                        <p>NOTE: Upload the documents below in the sales and marketing collateral section</p>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12 m-b-md">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="certificate" placeholder="List certificates here" ng-keyup="onKeyUp($event)" maxlength="300" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success proactis-blue-background" ng-click="addCertificate()">Add Certificate</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div ng-if="Categories.Certificates.length > 0">
+                            <div ng-repeat="certificate in Categories.Certificates" class="tag label label-info m-r-xxs m-b-xxs proactis-blue-background" style="font-size: 100%; padding-right: 0px !important; white-space: normal; display: inline-block;">
+                                {{certificate.text}}
+                                <span type="button" ng-if="certificate.deletable" style="cursor: pointer; padding-right: 5px !important;" title="Remove Certificate" ng-click="deleteCertificate(certificate)">&times;</span>
+                            </div>
+                        </div>
+                        <div ng-if="Categories.Certificates.length === 0">
+                            <p>No certificates added yet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-white" id="locations">
+                    <div class="panel-heading">
+                        <h2 style="margin-top: 0px;">
+                            Service Area
+                            <a href="#" data-toggle="modal" data-target="#serviceareavid" style="font-size: 16px; color: #4E5E6A;">
+                                <i class="fa fa-question-circle" style="font-size: 16px;" aria-hidden="true" title="Areas in which you offer your products or services"></i>
+                            </a>
+                            <button type="button" class="btn proactis-blue-background btn-rounded pull-right" style="color:white;" ng-click="showServiceLocationModal()">Update Service Area Selection</button>
+                        </h2>
+                    </div>
+
+                    <div id="serviceMapPanel">
+                        <div class="panel-body" id="serviceMapPanelBody" style="padding-bottom: 0px; width: 100%;">
+                            <div class="col-md-6">
+                                <div id="serviceMap" style="max-height: 485px;"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <!--<div id="serviceLocationsGrid" kendo-grid k-options="serviceLocationsGrid"></div>-->
+                                <div ng-repeat="loc in myServiceLocations | orderBy:'Name'" class="tag label label-info m-r-xxs m-b-xxs proactis-blue-background" style="font-size: 100%; padding-right: 0px !important; white-space: normal; display: inline-block;">
+                                    {{loc.Name}}
+                                    <span type="button" style="cursor: pointer; padding-right: 5px !important;" title="Delete Location" ng-click="deleteServiceLocation(loc.ID)">&times;</span>
+                                </div>
+                                <div ng-if="myServiceLocations.length === 0">No service locations selected. </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="panel panel-white" id="credit">
+                    <div class="panel-heading m-b-lg">
+                        <h2 style="margin-top: 0px;">Check My Business Credit</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>Placeholder</p>
+                    </div>
+                </div>-->
+                <!--<div class="panel panel-white" id="historical">
+                    <div class="panel-heading m-b-lg">
+                        <h2 style="margin-top: 0px;">Historical Data</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div ng-include="'/Events/Profile/HistoricalData-template.html'"></div>
+                    </div>
+                </div>-->
+                <!--<div class="panel panel-white" id="directory">
+                    <div class="panel-heading m-b-lg">
+                        <h2 style="margin-top: 0px;">User Directory</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div kendo-grid k-options="usersGrid"></div>
+                    </div>
+                </div>-->
+
+                <div class="panel panel-white" id="documents">
+                    <div class="panel-heading m-b-lg">
+                        <h2 style="margin-top: 0px;">Sales and Marketing Collateral</h2>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post">
+                            <div class="k-content">
+                                <div class="row">
+
+                                    <div class="col-sm-12" style="background: #f5f5f5;">
+                                        <div class="form-group">
+                                            <div class="col-sm-12" style="border-radius: 4px; border: 1px solid #ccc;">
+                                                <input name="documentUpload" id="documentUpload" type="file" />
+                                                <span style="font-size: 12px;font-weight:bold; cursor:pointer;" onclick="showDosDonts();"><i>* All documents will be public.</i> <i class="fa fa-question-circle"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                        <div kendo-grid k-options="documentsGrid" id="documentsGrid"></div>
+                    </div>
+                </div>
+
+                <!--<div class="panel panel-white" id="admin">
+                    <div class="panel-heading m-b-lg">
+                        <h2 style="margin-top: 0px;">Admin Features</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>Placeholder</p>
+                    </div>
+                </div>-->
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <!--<div id="addressAddModify" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4><span ng-if="address.id !== null">Edit</span><span ng-if="address.id === null">New</span> Address</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <input class="form-control m-b-xxs" type="text" ng-model="address.address_name" placeholder="Address Name" />
+                        <input class="form-control m-b-xxs" type="text" ng-model="address.address" placeholder="Address" />
+                        <input class="form-control m-b-xxs" type="text" ng-model="address.address2" placeholder="Address 2" />
+                        <input class="form-control m-b-xxs" type="text" ng-model="address.city" placeholder="City" />
+                        <input class="form-control m-b-xxs" type="text" ng-model="address.state" placeholder="State" />
+                        <input class="form-control m-b-xxs" type="text" ng-model="address.postal_code" placeholder="Postal Code" />
+                        <input class="form-control m-b-xxs" type="text" ng-model="address.country_code" placeholder="Country" />
+                        <select class="selectpicker" title="Address Type" id="addressType" ng-model="address.address_type" data-size="7" data-width="100%">
+                            <option ng-repeat="type in businessLocationsType" value="{{type.value}}">{{type.text}}</option>
+                        </select>
                     </div>
                 </div>
-                <div class="container">
+                <div class="modal-footer">
+                    <button class="btn btn-default pull-right" ng-click="saveAddress()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <div id="logoUploadModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4>Upload Logo</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="file" id="logoUpload" name="logoUpload" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="documentUploadDosDontsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom:none; padding:0px">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding:10px;"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
                     <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <style>
-                                    .video-container {
-                                        position: relative;
-                                        padding-bottom: 56.25%;
-                                        padding-top: 30px;
-                                        height: 0;
-                                        overflow: hidden;
-                                    }
-
-                                        .video-container iframe, .video-container object, .video-container embed {
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            width: 100%;
-                                            height: 100%;
-                                        }
-                                </style>
-                                <!-- Project Details Go Here -->
-                                <div class="row">
-                                    <h2>Thunderbird Mountain Park</h2>
-                                </div>
-                                <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/OpZv9O0695A?start=80" frameborder="0" allowfullscreen></iframe>
-
-                                </div>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Threads</li>
-                                    <li>Category: Illustration</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fa fa-times"></i>
-                                    Close Project
-                                </button>
-                                <p>Use this area to describe your project.</p>
-
-                            </div>
+                        <div class="col-md-6" style="padding:0px; border-right:groove; text-align: center;">
+                            <h1 class="text-center"><i class="fa fa-check-circle" style="color: green; font-size:70px;" aria-hidden="true"></i></h1>
+                            <h3>Acceptable</h3>
+                            <ul>
+                                <li>Catalogues</li>
+                                <li>Brochures</li>
+                                <li>Eco Friendly Info</li>
+                                <li>Spec Sheets</li>
+                                <li>General Company Info</li>
+                                <li>Public Documents</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6" style="padding:0px; text-align: center;">
+                            <h1 class="text-center"><i class="fa fa-times-circle" style="color: red; font-size:70px;" aria-hidden="true"></i></h1>
+                            <h3>Unacceptable</h3>
+                            <ul>
+                                <li>Documents with Customer Names</li>
+                                <li>Pricing/Proposals</li>
+                                <li>Financial Records</li>
+                                <li>Insurance Information</li>
+                                <li>Any other private documents</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
+        <!--<div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+
                 </div>
-                <div class="container">
+                <div class="modal-body">
                     <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <style>
-                                    .video-container {
-                                        position: relative;
-                                        padding-bottom: 56.25%;
-                                        padding-top: 30px;
-                                        height: 0;
-                                        overflow: hidden;
-                                    }
-
-                                        .video-container iframe, .video-container object, .video-container embed {
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            width: 100%;
-                                            height: 100%;
-                                        }
-                                </style>
-                                <!-- Project Details Go Here -->
-                                <div class="row">
-                                    <h2>Thunderbird Mountain Park</h2>
-                                </div>
-                                <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/mOqVIunsfrI" frameborder="0" allowfullscreen></iframe>
-
-                                </div>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Threads</li>
-                                    <li>Category: Illustration</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fa fa-times"></i>
-                                    Close Project
-                                </button>
-                                <p>Use this area to describe your project.</p>
-
-                            </div>
+                        <div class="col-md-6">
+                            <h1 class="text-center"><i class="fa fa-check-circle" style="color: green;" aria-hidden="true"></i></h1>
+                            <h3 class="text-center">Do's</h3>
+                            <ul>
+                                <li style="list-style: disc;">Catalogues</li>
+                                <li style="list-style: disc;">Brochures</li>
+                                <li style="list-style: disc;">Eco Friendly Info</li>
+                                <li style="list-style: disc;">Spec Sheets</li>
+                                <li style="list-style: disc;">General Company Info</li>
+                                <li style="list-style: disc;">Public Documents</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="text-center"><i class="fa fa-times-circle" style="color: red;" aria-hidden="true"></i></h1>
+                            <h3 class="text-center">Don'ts</h3>
+                            <ul>
+                                <li style="list-style: disc;">Non-Discolsure Agreements with Customer Names</li>
+                                <li style="list-style: disc;">Certificate of Insurance with customer names</li>
+                                <li style="list-style: disc;">Pricing/Proposals</li>
+                                <li style="list-style: disc;">Any other private documents</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
+    <div class="modal fade bs-example-modal-md moreinfo" id="serviceareavid" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom:none; padding-bottom:-50px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Project Name</h2>
-                  <p class="item-intro text-muted">About Text</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                  <p>Use this area to describe your project.</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Lines</li>
-                    <li>Category: Branding</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+                    <h3>How to Add Service Areas</h3>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Project Name</h2>
-                  <p class="item-intro text-muted">About Text</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                  <p>Use this area to describe your project.</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Southwest</li>
-                    <li>Category: Website Design</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+                <div class="modal-body" style="margin-top:0px;">
+                    <iframe src="https://player.vimeo.com/video/223474262?title=0&byline=0&portrait=0" style="width:100%; height:auto; min-height:400px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Project Name</h2>
-                  <p class="item-intro text-muted">About Text</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                  <p>Use this area to describe your project.</p>
-                  <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Window</li>
-                    <li>Category: Photography</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+    <script>
+                    $("#serviceareavid").on('hidden.bs.modal', function (e) {
+                        $("#serviceareavid iframe").attr("src", $("#serviceareavid iframe").attr("src"));
+                    });
+    </script>
+    <div id="documentTypeModal" class="modal fade" role="dialog">
+        <div class="modal-lg modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4>Edit Files</h4>
                 </div>
-              </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row" ng-repeat="file in newFiles">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="col-sm-4">
+                                            <label class="form-control-static">
+                                                <span>Choose Document Type:</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <select class="selectpicker form-control-static" title="Document Type" data-size="4" data-width="100%" ng-model="file.TypeLU">
+                                                <option value="638" selected="selected">Sales & Marketing Collateral</option>
+                                                <option value="695">Product/Service Specifications</option>
+                                                <option value="696">Diversity Designation Document</option>
+                                                <option value="697">Product/Service Photos</option>
+                                                <option value="698">Warranty Information</option>
+                                                <option value="699">Policies and Procedures</option>
+                                                <option value="700">Business Information</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <div class="col-sm-4">
+                                            <label class="form-control-static">
+                                                <span>Rename File:</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input ng-model="file.DisplayName" class="form-control" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="updateNewFiles()">Save</button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <div ng-include="'service-location-template.html'"></div>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <ng-include src="'/footer-template.html'"></ng-include>
 
-    <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/portfolio.js"></script>
-
-  </body>
-
+    <div after-render="afterRender"></div>
+</body>
 </html>
