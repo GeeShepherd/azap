@@ -99,7 +99,6 @@ body {
     .navbar-brand {
         display:none;
     }
-
   #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -237,6 +236,11 @@ header.masthead {
 @media (max-width: 767px) {
     .overlay {
         display:none;
+    }
+}
+@media (max-width: 9927px) {
+    #about p, h4 {
+      text-align: center;
     }
 }
 @media (min-width: 767px) {
